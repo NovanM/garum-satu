@@ -478,14 +478,14 @@ hr {
 /* ==== */
 
 @media (min-width: 520px) and (max-width: 920px) {
-  .berita-terbaru-container .col-filter-berita {
+  /* .berita-terbaru-container .col-filter-berita {
     flex: 0 0 95%;
     max-width: 95%;
   }
 
   .berita-terbaru-container img {
     border-radius: 10px 10px 0px 0px !important;
-  }
+  } */
 
   .galery .galery-col {
     flex: 0 0 73%;
@@ -519,7 +519,7 @@ hr {
     border-radius: 10px 10px 0px 0px !important;
   }
 
-  .list-berita-tab-content .list-berita .col-md-8 {
+  /* .list-berita-tab-content .list-berita .col-md-8 {
     padding-left: 1.8rem;
     padding-right: 1.8rem;
   }
@@ -527,11 +527,11 @@ hr {
   .berita-terbaru-container .col-filter-berita {
     flex: 0 0 100%;
     max-width: 100%;
-  }
+  } */
 
-  .berita-terbaru-container img {
+  /* .berita-terbaru-container img {
     border-radius: 10px 10px 0px 0px !important;
-  }
+  } */
 
   .galery .galery-col {
     flex: 0 0 100%;

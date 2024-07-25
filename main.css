@@ -236,7 +236,7 @@
 
 .bg-info-layanan .info-layanan-lengkap > button {
   border-radius: 30px;
-  padding: 6px 28px;
+  /* padding: 6px 28px; */
   background-color: #f1f1f1;
   color: black;
   font-weight: 600;

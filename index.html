@@ -34,6 +34,23 @@
     />
 
     <link rel="stylesheet" href="main.css" />
+
+    <style>
+         .card-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .card {
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #088395; 
+            color: white;
+        }
+    </style>
   </head>
 
   <body class="text-left">
@@ -62,7 +79,9 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a href="index.html" class="nav-link active">Beranda</a>
+                <a href="index.html" class="nav-link active"
+                  >Beranda</a
+                >
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -77,18 +96,24 @@
                   Profil
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="profil/sejarah.html"
+                  <a
+                    class="dropdown-item"
+                    href="profil/sejarah.html"
                     >Sejarah</a
                   >
-                  <a class="dropdown-item" href="profil/visimisi.html"
+                  <a
+                    class="dropdown-item"
+                    href="profil/visimisi.html"
                     >Visi & Misi</a
                   >
-                  <a class="dropdown-item" href="profil/strukturorganisasi.html"
+                  <a
+                    class="dropdown-item"
+                    href="profil/strukturorganisasi.html"
                     >Gambaran Umum Struktur Organisasi</a
                   >
                 </div>
               </li>
-
+              
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -102,28 +127,19 @@
                   Informasi Publik
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                  <a
-                    class="dropdown-item"
-                    href="informasi-publik/administrasi.html"
-                    >Administrasi</a
-                  >
-                  <a
-                    class="dropdown-item"
-                    href="informasi-publik/kesehatan.html"
-                    >Kesehatan</a
-                  >
-                  <a
-                    class="dropdown-item"
-                    href="informasi-publik/pendidikan.html"
-                    >Pendidikan</a
-                  >
+                  <a class="dropdown-item" href="informasi-publik/administrasi.html">Administrasi</a>
+                  <a class="dropdown-item" href="informasi-publik/kesehatan.html">Kesehatan</a>
+                  <a class="dropdown-item" href="informasi-publik/pendidikan.html">Pendidikan</a>
                 </div>
               </li>
               <li class="nav-item">
-                <a href="umkm.html" class="nav-link">UMKM</a>
+                <a href="umkm.html" class="nav-link"
+                  >UMKM</a
+                >
               </li>
               <li class="nav-item">
-                <a href="dokumentasi.html" class="nav-link">Dokumentasi</a>
+                <a href="dokumentasi.html" class="nav-link"
+                  >Dokumentasi</a>
               </li>
             </ul>
           </div>
@@ -200,82 +216,164 @@
     </div>
 
     <!-- info dan layananan -->
-    <div class="bg-info-layanan  pb-5">
-      <div class="bg-bunga container pb-5">
-        <div class="bg-bungkarno ">
-          <div class="item-borrow px-0 pt-3">
-            <p class="mt-4 ml-5 mb-4 font-weight-bold text-on-title">
-              Informasi dan layanan
-            </p>
-            <div
-              class="col-md-6 mt-4 justify-content-center d-flex mb-5 d-lg-none d-md-none d-sm-block"
-            >
-              <img
-                src="assets/images/20240715_1045.png"
-                alt=""
-                class="img-fluid welcome-img d-lg-none d-md-none d-sm-block"
-              />
+    <!-- <div class="bg-info-layanan mt-5 ">
+      <div class="bg-bunga">
+        <div class="bg-bungkarno container">
+          <div class="row mx-0 py-md-5">
+            <div class="col-md-6  item-borrow px-0 mb-4 py-3">
+              <p class="mt-4 ml-md-0 mb-4 font-weight-bold text-on-title">
+                Informasi dan layanan
+              </p>
+              <div class="col-md-6 mt-4 justify-content-center d-flex mb-5 d-lg-none d-md-none d-sm-block">
+                <img
+                  src="assets/images/20240715_1045.png"
+                  alt=""
+                  class="img-fluid welcome-img d-lg-none d-md-none d-sm-block"
+                />
+              </div>
+              <p class="text-on-sub-title mt-4 ml-3 ml-md-0">Penduduk</p>
+              
+              <div class="row ml-0">
+                <div class="col-md-12 px-md-0 ">
+                  <div class="nav nav-pills" id="v-pills-tab" role="tablist">
+                    <div class="row  p-2 ">
+                      <div class="col-sm-12 col-md-6 col-lg-3" >
+                        <button
+                          class="btn btn-no-focus-border btn-informasi mb-3"
+                          type="button"
+                          role="tab"
+                          aria-controls="v-pills-button2"
+                          aria-selected="true" 
+                          onclick="window.location.href='informasi-publik/administrasi.html';"
+                        >
+                          <div
+                            class="card card-informasi p-3 align-items-center"
+                          >
+                            <div class="d-flex align-items-center">
+                              <i
+                                class="bi  bi-card-checklist"
+                                style="font-size: 24px"
+                                ><h5 class="mt-2 mb-0 ">Administrasi</h5></i
+                              >
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                      <div class="col-sm-12 col-md-6 col-lg-3">
+                        <button
+                          class="btn btn-no-focus-border btn-informasi mb-3"
+                          type="button"
+                          role="tab"
+                          aria-controls="v-pills-button1"
+                          aria-selected="true"
+                          onclick="window.location.href='informasi-publik/kesehatan.html';"
+                        >
+                          <div
+                            class="card card-informasi p-3 align-items-center"
+                          >
+                            <div class="d-flex align-items-center">
+                              <i class="bi bi-heart" style="font-size: 24px"
+                                ><h5 class="mt-2 mb-0">Kesehatan</h5></i
+                              >
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                      <div class="col-sm-12 col-md-6 col-lg-3">
+                        <button
+                          class="btn btn-no-focus-border btn-informasi mb-3 "
+                          type="button"
+                          role="tab"
+                          aria-controls="v-pills-button2"
+                          aria-selected="true"
+                          onclick="window.location.href='informasi-publik/pendidikan.html';"
+                        >
+                          <div
+                            class="card card-informasi p-3 align-items-center"
+                          >
+                            <div class="d-flex align-items-center">
+                              <i
+                                class="bi bi-mortarboard"
+                                style="font-size: 24px"
+                                ><h5 class="mt-2 mb-0 ">Pendidikan</h5>
+                              </i>
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-           
-          </div>
-          <div class="row mx-0 py-md-2">
-            <div class="col-md-6 mt-4 justify-content-center d-flex ">
+            <div class="col-md-6 mt-4 justify-content-center d-flex mb-5 ">
               <img
                 src="assets/images/20240715_1045.png"
                 alt=""
                 class="img-fluid welcome-img d-lg-block d-none"
               />
             </div>
-            <div class="col-md-6 px-md-0">
-              <p class="text-on-sub-title mt-4 ml-3 ml-2">Penduduk</p>
-              <div class="row ">
-                <div class="col-sm-12 col-md-6 col-lg-3">
-                  <a href="informasi-publik/administrasi.html" class="btn btn-no-focus-border btn-informasi mb-3" role="tab" aria-controls="v-pills-button2" aria-selected="true">
-                    <div class="card card-informasi p-3 align-items-center">
-                      <div class="d-flex align-items-center">
-                        <i class="bi bi-card-checklist" style="font-size: 24px">
-                          <h5 class="mt-2 mb-0">Administrasi</h5>
-                        </i>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3">
-                  <a href="informasi-publik/kesehatan.html" class="btn btn-no-focus-border btn-informasi mb-3" role="tab" aria-controls="v-pills-button1" aria-selected="true">
-                    <div class="card card-informasi p-3 align-items-center">
-                      <div class="d-flex align-items-center">
-                        <i class="bi bi-heart" style="font-size: 24px">
-                          <h5 class="mt-2 mb-0">Kesehatan</h5>
-                        </i>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3">
-                  <a href="informasi-publik/pendidikan.html" class="btn btn-no-focus-border btn-informasi mb-3" role="tab" aria-controls="v-pills-button2" aria-selected="true">
-                    <div class="card card-informasi p-3 align-items-center">
-                      <div class="d-flex align-items-center">
-                        <i class="bi bi-mortarboard" style="font-size: 24px">
-                          <h5 class="mt-2 mb-0">Pendidikan</h5>
-                        </i>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            
           </div>
         </div>
       </div>
-    </div>
-   
-      
+    </div> -->
+
+    <section class="container mt-5 mb-4">
+      <p class="mt-4 mb-4 font-weight-bold text-on-title">
+        Informasi dan layanan
+      </p>
+      <div class="row ">
+          <div class="col-12 ">
+              <img src="assets/images/bg-layanan.jpeg" class="img-fluid welcome-img lg-w-50" alt="Section Image">
+          </div>
+      </div>
+     
+      <div class="row mt-2 pb-5">
+        <div class="col-md-12">
+          <p class="mt-4 mb-4 font-weight-bold text-on-sub-title">
+            Penduduk
+          </p>
+        </div>
+          <div class="col-md-4 mb-4">
+              <div class="card text-center" onclick="location.href='page1.html'">
+                  <div class="card-body">
+                      <div class="card-icon">
+                          <i class="bi bi-briefcase"></i>
+                      </div>
+                      <h5 class="card-title">Layanan Administrasi</h5>
+                      <p class="card-text">Deskripsi singkat layanan administrasi.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card text-center" onclick="location.href='page2.html'">
+                  <div class="card-body">
+                      <div class="card-icon">
+                          <i class="bi bi-heart-pulse"></i>
+                      </div>
+                      <h5 class="card-title">Layanan Kesehatan</h5>
+                      <p class="card-text">Deskripsi singkat layanan kesehatan.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card text-center" onclick="location.href='page3.html'">
+                  <div class="card-body">
+                      <div class="card-icon">
+                          <i class="bi bi-book"></i>
+                      </div>
+                      <h5 class="card-title">Layanan Pendidikan</h5>
+                      <p class="card-text">Deskripsi singkat layanan pendidikan.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
     <!-- end info dan layanaan -->
 
     <!-- UMKM -->
     <!-- Parallax Section -->
-    <section class="parallax-section ">
+    <section class="parallax-section">
       <p class="text-on-title">UMKM Kelurahan Garum</p>
     </section>
 
@@ -284,10 +382,7 @@
       <div class="row">
         <!-- Card 1 -->
         <div class="col-md-6 col-lg-4">
-          <div
-            class="card facility-card"
-            onclick="window.location.href='umkm/umkm-opak-gambir.html';"
-          >
+          <div class="card facility-card"  onclick="window.location.href='umkm/umkm-opak-gambir.html';">
             <img
               src="assets/images/opak-gambir.jpeg"
               class="card-img-top"
@@ -308,10 +403,7 @@
         </div>
         <!-- Card 2 -->
         <div class="col-md-6 col-lg-4">
-          <div
-            class="card facility-card"
-            onclick="window.location.href='umkm/umkm-pecel-billy.html';"
-          >
+          <div class="card facility-card"  onclick="window.location.href='umkm/umkm-pecel-billy.html';">
             <img
               src="assets/images/pecel-billy.jpeg"
               class="card-img-top"
@@ -330,10 +422,7 @@
         </div>
         <!-- Card 3 -->
         <div class="col-md-6 col-lg-4">
-          <div
-            class="card facility-card"
-            onclick="window.location.href='umkm/umkm-tahu-bulat-gemilang.html';"
-          >
+          <div class="card facility-card"  onclick="window.location.href='umkm/umkm-tahu-bulat-gemilang.html';">
             <img
               src="assets/images/tahu-bulat.webp"
               class="card-img-top"
@@ -353,12 +442,11 @@
           </div>
         </div>
         <!-- Card 4 -->
-        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
+
+        </div>
         <div class="col-md-6 col-lg-4">
-          <div
-            class="card facility-card"
-            onclick="window.location.href='umkm/umkm-batik-eco-print-gondo-arum.html';"
-          >
+          <div class="card facility-card"  onclick="window.location.href='umkm/umkm-batik-eco-print-gondo-arum.html';">
             <img
               src="assets/images/batik.jpeg"
               class="card-img-top"
@@ -380,10 +468,7 @@
         <!-- Card 5 -->
 
         <div class="col-md-6 col-lg-4">
-          <div
-            class="card facility-card"
-            onclick="window.location.href='umkm/umkm-souvenir-pancasona.html';"
-          >
+          <div class="card facility-card"  onclick="window.location.href='umkm/umkm-souvenir-pancasona.html';">
             <img
               src="assets/images/IMG-20240720-WA0005.webp"
               class="card-img-top"
@@ -400,46 +485,50 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
+          
+        </div>
       </div>
       <a href="umkm.html" class="btn btn-primary btn-view-all">Lihat Semua</a>
     </div>
     <!-- End UMKM -->
 
-    <!-- Instagram -->
+     <!-- Instagram -->
     <div class="instagram-feed mt-5 py-5">
-      <div class="line-top">
-        <div class="container">
-          <div class="line-wrap"></div>
+  <div class="line-top">
+    <div class="container">
+      <div class="line-wrap"></div>
+    </div>
+  </div>
+  <div class="py-4">
+    <div class="container">
+      <div class="row mx-0">
+        <div class="col-md-12">
+          <p class="text-center text-on-title">
+            Instagram Kelurahan Garum
+          </p>
         </div>
       </div>
-      <div class="py-4">
-        <div class="container">
-          <div class="row mx-0">
-            <div class="col-md-12">
-              <p class="text-center text-on-title">Instagram Kelurahan Garum</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="bg-instagram py-3">
-        <div class="container">
-          <div class="row mx-xs-0">
-            <div class="col-md-12 px-xs-0">
-              <div class="iframe-container">
-                <iframe
-                  src="https://www.instagram.com/kelurahangarum/embed/"
-                  frameborder="0"
-                  scrolling="no"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </div>
+    </div>
+  </div>
+  <div class="bg-instagram py-3">
+    <div class="container">
+      <div class="row mx-xs-0">
+        <div class="col-md-12 px-xs-0">
+          <div class="iframe-container">
+            <iframe
+              src="https://www.instagram.com/kelurahangarum/embed/"
+              frameborder="0"
+              scrolling="no"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
     <!-- End Instagram -->
 
@@ -447,7 +536,11 @@
       <div class="container">
         <div class="row mx-0 my-4">
           <div class="col-md-12">
-            <p class="text-center text-on-title">Tentang Kami</p>
+            <p
+              class="text-center text-on-title"
+            >
+              Tentang Kami
+            </p>
           </div>
         </div>
       </div>
@@ -458,9 +551,7 @@
               <div class="card">
                 <div class="card-body p-5">
                   <div class="title mb-4">
-                    <p class="font-weight-bold text-on-sub-title">
-                      Portal Kelurahan Garum
-                    </p>
+                    <p class="font-weight-bold text-on-sub-title">Portal Kelurahan Garum</p>
                   </div>
                   <div class="row border-card">
                     <div
